@@ -4,7 +4,7 @@ This repository contains a configuration for a github action to apply a [black](
 
 # Usage
 
-To use this, you need to set up an action in the repository you want to check. An action is configured by a file in the repository at `.github/workflows/file.yaml`. You can see an example below, which will run black on all python files in the repository if a pull request comes in.
+To use this, you need to set up an action in the repository you want to check. An action is configured by a file in the repository at `.github/workflows/file.yaml`. You can also use the actions tab in github to get started. Below is an example workflow, which will run black on all python files in the repository if a pull request comes in.
 
 ```yaml
 
@@ -27,7 +27,7 @@ jobs:
     # Then, we run the black formatter
     - name: Run Black
       # From the repository in ori-drs, which contains a dockerfile
-      uses: ori_drs/black-action@master
+      uses: ori-drs/black-action@master
       # The dockerfile is run and receives arguments into the entrypoint.sh file. Here we pass the arguments we need to the formatter
       with:
         args: --check .
